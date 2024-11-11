@@ -1,0 +1,149 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  margin: 0;
+  padding: 20px;
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #d9534f;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+nav button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5bc0de;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+nav button:hover {
+  background-color: #31b0d5;
+  transform: scale(1.05);
+}
+
+.add-job-form,
+.job-list {
+  margin-bottom: 20px;
+  border: 2px solid #d9534f;
+  border-radius: 5px;
+  padding: 15px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  background-color: #f8f9fa;
+}
+
+.add-job-form:hover,
+.job-list:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.add-job-form h2,
+.job-list h2 {
+  color: #5bc0de;
+}
+
+.add-job-form input,
+.add-job-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #d9534f;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.add-job-form input:focus {
+  border-color: #5bc0de;
+  outline: none;
+}
+
+.add-job-form button {
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-job-form button:hover {
+  background-color: #4cae4c;
+}
+
+.job-list {
+  padding: 10px;
+}
+
+.job-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.job-list li {
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e7f3fe;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.job-list li:hover {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.job-list li button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.job-list li button:hover {
+  background: #c9302c;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 0.9em;
+}

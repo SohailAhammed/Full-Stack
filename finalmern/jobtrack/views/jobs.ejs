@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+</head>
+<body>
+    <h3>All Jobs</h3>
+    <form action="/jobs/new">
+        <button>Create New Job</button>
+    </form>
+
+    <% for(job of AllJobs) { %>
+        <div>
+            <p>Title: <%= job.title %></p>
+            <p>Company: <%= job.company %></p>
+            <p>Location: <%= job.location %></p>
+            <p>Status: <%= job.status %></p>
+            <p>Date Applied: <%= job.dateApplied.toLocaleDateString() %></p>
+            
+            <form method="get" action="/jobs/<%= job.id %>/edit">
+                <button>Edit</button>
+            </form>
+            <form method="post" action="/jobs/<%= job.id %>?_method=delete">
+                <button>Delete</button>
+            </form>
+        </div>
+        <hr>
+    <% } %>
+</body>
+</html>
